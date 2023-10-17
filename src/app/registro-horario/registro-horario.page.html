@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registro de Alumnos
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pagina-anterior" text="Volver" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro de alumnos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-button size="small" (click)="mostrarFecha()">Generar registro </ion-button>
+
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-badge >{{fecha | date :"medium"}}</ion-badge>
+      <br><ion-label>Ramo:</ion-label>
+      <ion-badge>Arquitectura</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-badge >{{fecha | date :"medium"}}</ion-badge>
+      <br><ion-label>Ramo:</ion-label>
+      <ion-badge>Programacion Apps Moviles</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-badge >{{fecha | date :"medium"}}</ion-badge>
+      <br><ion-label>Ramo:</ion-label>
+      <ion-badge>Estadistica</ion-badge>
+    </ion-item>
+
+
+  </ion-list>
+
+  <ion-img src="assets/images/qr-code.png" ></ion-img>
+
+</ion-content>

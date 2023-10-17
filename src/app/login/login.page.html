@@ -1,0 +1,37 @@
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-img src="assets/images/logo.png"></ion-img>
+
+    <form (ngSubmit)="login()">
+
+        <div class="label"><ion-label position="center" >Usuario</ion-label></div>
+        <ion-input [(ngModel)]="username" placeholder="PedritoCalfun"  name="username" type="text" required></ion-input>
+<br>   <div class="label">
+        <ion-label class="label">Contraseña</ion-label></div>
+        <ion-input [(ngModel)]="password" placeholder="****"  name="password" type="password" maxlength="4"onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"></ion-input>
+
+
+      <div class="btn">
+        <ion-button class="btnlogin" id="open-toast" size="default" type="submit" color="btnlogin">
+          <p id="message">Ingresar</p>
+        </ion-button>
+      </div>
+      <div class="frgpass">
+        <ion-button color="btnlogin" fill="clear" (click)="reestablecer() ">Restablecer contraseña</ion-button> 
+        <p>No tienes una cuenta? <a target="_self" rel="noopener noreferrer" [routerLink]="['/registro-user']">Regístrate</a>
+      </p>
+      </div>
+    </form>
+
+   
+  </div>
+
+</ion-content>

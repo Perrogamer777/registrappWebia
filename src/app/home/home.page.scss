@@ -1,0 +1,41 @@
+ion-header{
+  ion-toolbar,.item{
+    --background: #fe9b10;
+    background: #fe9b10;
+    padding: 0 20px;
+  }
+
+  ion-toolbar{
+    .bordered{
+      --border-radius: 10px;
+      --box-shadow: 5px 5px 10px #fe9b10, -5px -5px 10px #fe9b10;
+    }
+  }
+
+  
+
+} 
+ion-content{
+
+
+
+  
+
+    h2 {
+      text-align: center;
+      padding-bottom: 8px;
+      color: black;
+    }
+
+  }
+  ion-img {
+    width: 250px;
+
+    margin: 0 auto 20px; /* Centra la imagen horizontalmente */
+  }
+
+
+  .btns{
+    display: flex;
+    justify-content: center;
+  }

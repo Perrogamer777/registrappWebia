@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar><div class="item">
+    
+    <ion-label>
+      <p>Bienvenido</p>{{nombreUsuario}}
+    
+    </ion-label>
+</div>
+   
+    <ion-buttons slot="secondary">
+      <ion-button id="open-modal">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        
+      </ion-button>
+      <ion-button class="bordered" color="light">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+      <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" >
+        <ng-template>
+          <ion-header>
+            <ion-header [translucent]="true">
+              <ion-toolbar>
+                <ion-title></ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-toolbar>
+              <ion-title>Datos api</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="modal.dismiss()">Cerrar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <h2>Datos api</h2>
+
+            <ion-button color="btnlogin" (click)="irApi() ">Ver datos api :v</ion-button>
+            <ul>
+              <li *ngFor="let item of data">
+                Id:{{item.id}}
+                Titulo: {{item.title}}
+              </li>
+            </ul>
+            
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </ion-buttons>
+    
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+
+    <h2 style="text-align: center;">Viernes</h2>
+    <ion-list [inset]="true">
+      <ion-item [routerLink]="['/registro-horario']" class="item1">
+        <ion-label >Programacion Aplicaciones Moviles<br> <p >8:30</p></ion-label> <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+       
+      </ion-item>
+      <ion-item [routerLink]="['/registro-horario']">
+        <ion-label>Arquitectura<br> <p >10:00</p></ion-label> <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+
+      </ion-item >
+      <ion-item [routerLink]="['/registro-horario']">
+        <ion-label>Calidad de Software<br> <p>11:30</p></ion-label> <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+      </ion-item>
+      <ion-item [routerLink]="['/registro-horario']">
+        <ion-label>Diseño y Gestion de Requisitos<br> <p >13:40</p></ion-label> <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+      </ion-item>
+      <ion-item [routerLink]="['/registro-horario']">
+        <ion-label>Modelamiento de Base de Datos<br> <p>15:30</p></ion-label> <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list> 
+
+    <ion-button (click)="enviarDatos()">Enviar datos :v</ion-button>
+    <ion-button (click)="eliminarDatos()">Borrar datos :v</ion-button>
+    <ion-button (click)="limpiarDatos()">Limpiar datos :v</ion-button>
+    <ion-button color="btnlogin" (click)="irApi() ">Ver datos api</ion-button>
+    <ul>
+      <li *ngFor="let item of data">
+        Id:{{item.id}}
+        Titulo: {{item.title}}
+      </li>
+    </ul>
+
+
+
+
+
+
+    <ion-img src="assets/images/logo.png"  [routerLink]="['/login']" style="width: 150px;"></ion-img>
+
+
+
+</ion-content>
